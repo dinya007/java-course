@@ -1,12 +1,10 @@
 package ru.java.course.lesson.three;
 
-import java.util.List;
-
 /**
  * @author dinyat
  * 16/08/2017
  */
-public class Student {
+public class Student implements Comparable {
 
     private String firstName;
     private String lastName;
@@ -51,4 +49,9 @@ public class Student {
             '}';
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return Integer.compare(this.age, ((Student) o).age
+        );
+    }
 }
