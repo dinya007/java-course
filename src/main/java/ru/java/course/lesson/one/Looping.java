@@ -1,24 +1,33 @@
 package ru.java.course.lesson.one;
 
+import java.util.Scanner;
+
 /**
  * @author dinyat
- * 01/08/2017
+ *         01/08/2017
  */
 public class Looping {
 
-
     public static void main(String[] args) {
-        int[] array1 = new int[10];
-        int[] array2 = {1, 2};
-        int[] array = new int[]{1, 2, 3};
+        boolean run = true;
+        while (run) {
+            System.out.println("Пожалуйста, введите число:");
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println(array1.length);
-        System.out.println(array2.length);
-        System.out.println(array.length);
+            int input = scanner.nextInt();
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+            if (input == 0) {
+                System.out.println("Zero");
+            } else if (input % 2 == 0) {
+                System.out.println("Even");
+            } else {
+                System.out.println("Odd");
+            }
+
+            System.out.println("Продолжить исполнение?");
+            run = scanner.nextBoolean(); // заменить на да/нет
         }
+
     }
 
 }
