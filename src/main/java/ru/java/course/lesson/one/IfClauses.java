@@ -31,8 +31,6 @@ public class IfClauses {
                 break; // remove
             default:
                 System.out.println("Default");
-
-
         }
 
     }

@@ -11,24 +11,31 @@ public class Looping {
             Scanner scanner = new Scanner(System.in);
 
             int input = scanner.nextInt();
+            System.out.println(categorize(input));
 
-            if (input == 0) {
-                System.out.println("Zero");
-            } else if (input % 2 == 0) {
-                System.out.println("Even");
-            } else {
-                System.out.println("Odd");
-            }
 
             System.out.println("Продолжить исполнение?");
             String doNext = scanner.next(); // заменить на да/нет
 
             if ("нет".equalsIgnoreCase(doNext)) {
-                run = false;
+                break;
             }
 
         }
 
     }
+
+    private static String categorize(int input) {
+        String result;
+        if (input == 0) {
+            result = "Zero";
+        } else if (input % 2 == 0) {
+            result = "Even";
+        } else {
+            result = "Odd";
+        }
+        return result;
+    }
+
 
 }
