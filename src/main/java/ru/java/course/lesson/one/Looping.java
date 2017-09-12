@@ -21,7 +21,12 @@ public class Looping {
             }
 
             System.out.println("Продолжить исполнение?");
-            run = scanner.nextBoolean(); // заменить на да/нет
+            String doNext = scanner.next(); // заменить на да/нет
+
+            if ("нет".equalsIgnoreCase(doNext)) {
+                run = false;
+            }
+
         }
 
     }
