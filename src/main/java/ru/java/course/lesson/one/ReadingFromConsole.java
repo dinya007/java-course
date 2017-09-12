@@ -2,10 +2,6 @@ package ru.java.course.lesson.one;
 
 import java.util.Scanner;
 
-/**
- * @author dinyat
- * 15/08/2017
- */
 public class ReadingFromConsole {
 
     public static void main(String[] args) {

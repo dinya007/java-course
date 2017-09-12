@@ -2,10 +2,6 @@ package ru.java.course.lesson.one;
 
 import java.util.Scanner;
 
-/**
- * @author dinyat
- * 12/09/2017
- */
 public class Fibonacci {
 
     public static void main(String[] args) {
