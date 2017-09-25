@@ -1,7 +1,5 @@
 package ru.java.course.homework.two;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 /**
  * @author dinyat
  * 19/09/2017

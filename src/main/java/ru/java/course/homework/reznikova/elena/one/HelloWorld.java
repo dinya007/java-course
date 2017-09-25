@@ -1,4 +1,4 @@
-package ru.java.course.homework.reznikova.elena;
+package ru.java.course.homework.reznikova.elena.one;
 
 import java.util.Scanner;
 
