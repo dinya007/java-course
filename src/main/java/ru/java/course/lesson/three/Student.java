@@ -6,38 +6,28 @@ package ru.java.course.lesson.three;
  */
 public class Student implements Comparable {
 
-    private String firstName;
-    private String lastName;
-    private int age;
+    private final String firstName;
+    private final String lastName;
+    private final int age;
+    private final double averageScore;
 
-    public Student(String firstName, String lastName, int age) {
+    public Student(String firstName, String lastName, int age, double averageScore) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.averageScore = averageScore;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     @Override
@@ -46,6 +36,7 @@ public class Student implements Comparable {
             "firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
             ", age=" + age +
+            ", averageScore=" + averageScore +
             '}';
     }
 
