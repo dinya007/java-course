@@ -37,32 +37,26 @@ public class HashMapPresentation {
         HashSet<Course> courses = new HashSet<>();
         courses.add(Course.MATH);
         courses.add(Course.PHYSICS);
+
         studentCourses.put(alex, courses);
         studentCourses.put(kate, courses);
+
         System.out.println(studentCourses.get(alex));
         System.out.println(studentCourses.get(new Student("Kate", "Williams", 16, 4.0)));
+//
+//        Map<Student, Set<Course>> newStudentCourses = studentCourses.entrySet().stream().collect(Collectors.toMap(entry -> entry.getKey(), Map.Entry::getValue));
+//
+//        List<Integer> list = Arrays.asList(4, 2, 7);
+//        Collections.sort(list);
+//        System.out.println(list);
+//        Collections.sort(list, Collections.reverseOrder());
+//        System.out.println(list);
+//
+//        List<Student> students = new ArrayList<>();
+//        students.add(alex);
+//        students.add(kate);
+//        students.add(john);
 
-        Map<Student, Set<Course>> newStudentCourses = studentCourses.entrySet().stream().collect(Collectors.toMap(entry -> entry.getKey(), Map.Entry::getValue));
-
-        List<Integer> list = Arrays.asList(4, 2, 7);
-        Collections.sort(list);
-        System.out.println(list);
-        Collections.sort(list, Collections.reverseOrder());
-        System.out.println(list);
-
-        List<Student> students = new ArrayList<>();
-        students.add(alex);
-        students.add(kate);
-        students.add(john);
-
-        Collections.sort(students, new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return Integer.compare(o1.getAge(), o2.getAge());
-            }
-        }.reversed());
-
-        System.out.println(students);
     }
 
 }
