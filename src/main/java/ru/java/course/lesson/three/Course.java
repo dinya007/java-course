@@ -9,7 +9,7 @@ public enum Course {
     MATH {
         @Override
         void printName() {
-
+            System.out.println("Mathematics");
         }
     },
     PHYSICS(456) {

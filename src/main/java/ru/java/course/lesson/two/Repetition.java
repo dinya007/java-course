@@ -1,5 +1,7 @@
 package ru.java.course.lesson.two;
 
+import ru.java.course.lesson.two.strategy.Tank;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;

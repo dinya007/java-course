@@ -14,6 +14,7 @@ public class Infantry extends Unit {
 
     @Override
     public void shoot() {
+        --ammunition;
         if (ammunition == 0) {
             System.out.println("Recharging...");
             ammunition = 30;

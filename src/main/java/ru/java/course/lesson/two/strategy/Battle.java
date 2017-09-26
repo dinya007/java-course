@@ -8,7 +8,7 @@ public class Battle {
 
     public static void main(String[] args) {
         Unit t34 = new Tank(10, 5);
-        Unit soldier = new Infantry(1,1);
+        Unit soldier = new Infantry(1, 1);
 
         soldier.move();
         t34.shoot();
@@ -16,7 +16,7 @@ public class Battle {
         soldier.shoot();
         t34.move();
 
-        t34.setTerrain(new RuggedTerrain());
+        t34.setTerrain(new SwampTerrain());
 
         t34.move();
     }
