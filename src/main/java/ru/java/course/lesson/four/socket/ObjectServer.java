@@ -1,4 +1,6 @@
-package ru.java.course.lesson.four;
+package ru.java.course.lesson.four.socket;
+
+import ru.java.course.lesson.four.DataObject;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

@@ -1,4 +1,4 @@
-package ru.java.course.lesson.four;
+package ru.java.course.lesson.four.socket;
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -16,6 +16,7 @@ public class StringServer {
             while (true) {
                 System.out.println("Waiting for connection...");
                 Socket socket = serverSocket.accept();
+                System.out.println("Client ip: " + socket.getInetAddress());
                 DataInputStream inputStream = new DataInputStream(socket.getInputStream());
                 System.out.println(inputStream.readUTF());
             }
