@@ -1,20 +1,23 @@
 package ru.java.course.homework.reznikova.elena.three.two;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
 public class Task2_1 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите массив:");
-        ArrayList<Integer> array = FillArray();
+//        ArrayList<Integer> array = FillArray();
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(0, 1, 4, 13, 5, 3, 7, 2));
         System.out.println("Вы ввели числа:");
         System.out.println(array);
         System.out.println("Введите число");
-        int number = NumberInput("число");
-        array.sort((o1, o2) -> 0);
+//        int number = NumberInput("число"); //имена методов начинаются со строчной буквы и пишутся в camelCase
+        int number = 3; //имена методов начинаются со строчной буквы и пишутся в camelCase
+        array.sort(Integer::compare); //сортирует массив так, что все элементы в нем считаются равными
+        System.out.println(array);
 
 
         ArrayList<Pair> result = new ArrayList<>();

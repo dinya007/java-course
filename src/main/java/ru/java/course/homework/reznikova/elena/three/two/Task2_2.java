@@ -1,21 +1,23 @@
 package ru.java.course.homework.reznikova.elena.three.two;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Task2_2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите массив:");
-        ArrayList<Integer> array = FillArray();
+//        ArrayList<Integer> array = FillArray();
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(0, 1, 4, 13, 5, 3, 7, 2));
         System.out.println("Вы ввели:");
         System.out.println(array);
 
         HashMap<Integer, ArrayList<Pair>> pairsBySum = Preprocess(array);
 
         System.out.println("Введите число");
-        int number = NumberInput("число");
+//        int number = NumberInput("число");
+        int number = 3;
 
         System.out.println(pairsBySum.get(number));
 
@@ -62,14 +64,15 @@ public class Task2_2 {
         for (int i = 0; i < array.size(); i++) {
             for (int j = i + 1; j < array.size(); j++) {
                 int sum = array.get(i) + array.get(j);
-                if (pairsBySum.containsKey(sum)) {
-                    ArrayList<Pair> p = pairsBySum.get(sum);
-                    p.add(new Pair(array.get(i), array.get(j)));
-                } else {
-                    ArrayList<Pair> p = new ArrayList<>();
-                    p.add(new Pair(array.get(i), array.get(j)));
-                    pairsBySum.put(array.get(i) + array.get(j), p);
-                }
+                pairsBySum.computeIfAbsent(sum, key -> new ArrayList<>()).add(new Pair(array.get(i), array.get(j)));
+//                if (pairsBySum.containsKey(sum)) {
+//                    ArrayList<Pair> p = pairsBySum.get(sum);
+//                    p.add(new Pair(array.get(i), array.get(j)));
+//                } else {
+//                    ArrayList<Pair> p = new ArrayList<>();
+//                    p.add(new Pair(array.get(i), array.get(j)));
+//                    pairsBySum.put(array.get(i) + array.get(j), p);
+//                }
             }
         }
         return pairsBySum;
