@@ -61,19 +61,20 @@ public class HelloWorld {
             System.out.println(categorize(scanner4.nextInt()));
             System.out.println("Продолжим?");
             String resp = scanner4.next();
-            if (resp.equalsIgnoreCase("нет"))
+            if (resp.equalsIgnoreCase("нет")) {
                 break;
+            }
         }
 
     }
 
-    public static String categorize(int input)
-    {
-        if (input == 0 )
+    public static String categorize(int input) {
+        if (input == 0) {
             return "это же нолик!";
-        else if (input % 2 == 0) {
+        } else if (input % 2 == 0) {
             return "четное!";
-        } else
+        } else {
             return "нечетное!";
+        }
     }
 }

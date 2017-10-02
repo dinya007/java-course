@@ -18,16 +18,13 @@ public class Task2_1 {
 
 
         ArrayList<Pair> result = new ArrayList<>();
-        for (int i = 0; i < array.size(); i++)
-        {
+        for (int i = 0; i < array.size(); i++) {
             int el = array.get(i);
             int diff = number - el;
-            if (diff < el)
+            if (diff < el) {
                 break;
-            else
-            {
-                if (Collections.binarySearch(array, diff) != -1)
-                {
+            } else {
+                if (Collections.binarySearch(array, diff) != -1) {
                     result.add(new Pair(el, diff));
                 }
             }
@@ -36,42 +33,36 @@ public class Task2_1 {
 
     }
 
-    public static int NumberInput (String message)
-    {
-        Scanner scanner=new Scanner(System.in);
-        int number=0;
-        while(true)
-        {
+    public static int NumberInput(String message) {
+        Scanner scanner = new Scanner(System.in);
+        int number = 0;
+        while (true) {
             try {
                 number = Integer.parseInt(scanner.next());
                 break;
 
             } catch (NumberFormatException e) {
-                System.out.println("Это не число! Введите "+ message + " повторно:");
+                System.out.println("Это не число! Введите " + message + " повторно:");
             }
         }
         return number;
     }
 
-    public static ArrayList<Integer> FillArray()
-    {
+    public static ArrayList<Integer> FillArray() {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> array = new ArrayList<>();
-        while(true)
-        {
+        while (true) {
             Integer n = NumberInput("элемент массива");
-            if(array.contains(n))
-            {
+            if (array.contains(n)) {
                 System.out.println("Такое число в массиве есть число, повторите ввод:");
                 continue;
-            }
-            else
-            {
+            } else {
                 array.add(n);
                 System.out.println("Добавить в массив еще число?");
                 String resp = scanner.next();
-                if (resp.equalsIgnoreCase("нет") || resp.equalsIgnoreCase("no") || resp.equalsIgnoreCase("n"))
+                if (resp.equalsIgnoreCase("нет") || resp.equalsIgnoreCase("no") || resp.equalsIgnoreCase("n")) {
                     break;
+                }
                 System.out.println("Введите число:");
             }
         }

@@ -1,13 +1,12 @@
 package ru.java.course.homework.reznikova.elena.three.three;
 
-public class Good{
+public class Good {
     private Integer art;
     private String name;
     private double cost;
     private int size;
 
-    public Good (int art, String name, double cost, int size)
-    {
+    public Good(int art, String name, double cost, int size) {
         this.art = art;
         this.name = name;
         this.cost = cost;
@@ -16,7 +15,7 @@ public class Good{
 
     @Override
     public String toString() {
-        return "Артикул: " + art +", наименование: " + name + ", размер: " + size + ", стоимость: " + cost + "р.";
+        return "Артикул: " + art + ", наименование: " + name + ", размер: " + size + ", стоимость: " + cost + "р.";
     }
 
     public Integer getArt() {
@@ -29,8 +28,12 @@ public class Good{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Good good = (Good) o;
 

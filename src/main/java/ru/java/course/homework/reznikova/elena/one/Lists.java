@@ -11,18 +11,19 @@ public class Lists {
             System.out.println(aList);
         }
         */
-        ArrayList <Integer> list1 = new ArrayList<>(Arrays.asList(1,17,3,4,17));
+        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(1, 17, 3, 4, 17));
         System.out.println("Максимальное число массива: " + getMax(list1));
 
 
     }
 
-    public static int getMax(ArrayList <Integer> list) {
+    public static int getMax(ArrayList<Integer> list) {
         int max = list.get(0);
         for (Integer aList : list) {
-            if (max < aList)
+            if (max < aList) {
                 max = aList;
+            }
         }
-       return max;
+        return max;
     }
 }

@@ -2,10 +2,10 @@ package ru.java.course.homework.reznikova.elena.one;
 
 public class MyList {
 
-    int[] array = new int [10];
+    int[] array = new int[10];
 
     public MyList() {
-        this.array = new int [10];
+        this.array = new int[10];
     }
 
     public static void add(int input) {
