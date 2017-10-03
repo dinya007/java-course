@@ -13,7 +13,7 @@ import java.io.ObjectOutputStream;
  * @author dinyat
  * 02/10/2017
  */
-public class FileWritingExample {
+public class ObjectFileExample {
 
     public static void main(String[] args) {
         try {
