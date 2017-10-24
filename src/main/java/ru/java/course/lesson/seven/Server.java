@@ -7,7 +7,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -39,16 +38,20 @@ public class Server {
 
         new Thread(() -> {
             try {
-                Message message = ARRAY_BLOCKING_QUEUE.take();
-                for (ClientConnection connection : connections) {
-                    String json = OBJECT_MAPPER.writeValueAsString(message);
-                    DataOutputStream dataOutputStream = new DataOutputStream(connection.getSocket().getOutputStream());
-                    dataOutputStream.writeUTF(json);
-                    dataOutputStream.flush();
+                while (true) {
+                    Message message = ARRAY_BLOCKING_QUEUE.take();
+                    for (ClientConnection connection : connections) {
+                        String json = OBJECT_MAPPER.writeValueAsString(message);
+                        DataOutputStream dataOutputStream = new DataOutputStream(connection.getSocket().getOutputStream());
+                        dataOutputStream.writeUTF(json);
+                        dataOutputStream.flush();
+                    }
+
                 }
             } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
             }
+
         }).start();
 
     }
