@@ -1,1 +1,5 @@
-.idea
+.idea/**
+.idea/vcs.xml
+src/main/main.iml
+target/
+text.txt
